@@ -1,72 +1,25 @@
 \section{Introduction}
 
+In the last years, several changes in approaches to software reuse have led to the concept of Software Product Lines (SPL), that represents perhaps the most exciting paradigm shift in software development since the advent of high-level programming languages \cite{vanderlinden07}. Thereby, companies that have developed design-by-project software for years, now focus on building and maintaining SPL and their respective variabilities. 
 
-In the last years, several changes in approaches to software reuse have led to the concept of Software Product Lines (SPL), which represents a shift in focus from the unique paradigm of software development \cite{vanderlinden07}. Companies that have developed design-by-project software for years, now focus on building and maintaining SPL and their respective variabilities. 
-
-\begin{comment}
-Thus, models for representing variabilities are specified as part of the core assets of an SPL, and their correct identification, specification, and representation provide various development benefits. \cite{chen11,capilla13}.
-\end{comment}
-
-\begin{comment}Some of these approaches can be used in Domain Engineering (DE) and Application Engineering (AE) to support the selection and delimitation of the variant artifacts from different products \end{comment} 
 For an SPL to function properly, its domain must be carefully defined. If the domain is too large and the product members vary widely, the core assets will be overloaded beyond their ability to accommodate variation, production savings will be lost, and the product line will collapse. Variability management enables diversification in the portfolio of products in a given domain and requires the adoption of a well-defined systematic approach \cite{bockle05,vanderlinden07}.
-
-\begin{comment}On the other hand, if the domain is very small, the core assets may not be constructed generically enough to accommodate future growth and the product line will be stagnant, i.e., domain savings will never be achieved and all potential return of investment (ROI) will never materialize
-\end{comment}
 
 From a different but related perspective, the rapid growth of information and communication technologies has favored the emergence of innovative ways for facing the shortcomings of traditional education \cite{west12}. Mobile learning (m-learning), for instance, has provided a strong interaction between learners and instructors, enabling them to actively participate in the knowledge construction process anytime and anywhere \cite{moreira2018special,kukulska05}. 
 
-% Revision EMSE (31/07/2018)
-% M-learning has grown in terms of importance and visibility, mainly because of the significant results regarding flexibility and propagation of education \cite{kinshuk03,wexler08}. Such aspects have made m-learning a promising context for education. In 2011, the first ``UNESCO Mobile Learning Week'' suggested m-learning as an alternative to the ``teacher crisis'', an expression justified by global need for 8.2 million new teachers for the achievement of the UN Millennium Development Goal of providing universal primary education by 2015 \cite{west12}.
+Despite the benefits provided in the context of teaching and learning, m-learning presents some problems and challenges in its adoption \cite{sharples13}. One of these problems is that the existing methods for developing software are still very generic and do not address specific aspects of mobile learning applications. Due to the diversity of platforms, technologies and pedagogical methods considered for the development of m-learning applications, a wide range of specificities can be streamlined and addressed from a reuse perspective. 
 
-% Revision
-%Em outra vertente, a abordagem de desenvolvimento de software tradicional (chamada de "singular" neste paper) possui alguns problemas. Porque, apesar de suas técnicas de reuso intrinsecas, elas não seguem um gerenciamento formal e sistemático das similaridades, o que supostamente resulta em um maior time-to-market e número de falhas.
-%In another aspect, the traditional software development approach (called ``singular'') has some problems. Despite intrinsic reuse techniques, this approach does not follow a formal and systematic management of similarities, which is supposed to result in a greater time-to-market and number of faults.
+However, few studies have focused on development issues through a strategy of systematic reuse, such as SPL. \cite{bezerra09} and \cite{chen11} conducted systematic reviews and both identified gaps related to SPL adoption and variability management respectively.
 
-% #Revision
-Despite the benefits provided in the context of teaching and learning, m-learning presents some problems and challenges in its adoption \cite{sharples13}. One of these problems is that the existing methods for developing software are still very generic and do not address specific aspects of mobile learning applications. 
+The lack of studies that investigating these concepts in the domain of m-learning applications motivate us to conduct: (i) the establishment and development of an SPL such this domain \cite{falvojr14,falvojr14b}; and (ii) the evaluation of the proposed SPL. The SPL established was called \texttt{M-SPLear\allowbreak ning}, such SPL has been developed based on a concise UML-based variability management approach, named SMarty  (\textbf{S}tereotype-based \textbf{M}anagement of V\textbf{ar}iabili\textbf{ty}), which provides mechanisms to facilitate the identification and representation of variabilities \cite{marcolino13, marcolino14a, marcolino14b, bera15, marcolino2017}.
 
-Due to the diversity of platforms, technologies and pedagogical methods considered for the development of m-learning applications, a wide range of specificities can be streamlined and addressed from a reuse perspective. However, few studies have focused on development issues through a strategy of systematic reuse, such as SPL. Bezerra et al \cite{bezerra09} conducted a systematic review whose results support this gap.
-% #Revision
-%Nesse sentido, Bezerra et al conduziu uma revisão sistemática cujos resultados apoiam o gap citado.
-%In this sense, Bezerra et al \citeyear{bezerra09} conducted a systematic review whose results support the aforementioned gap.
+In this paper we discuss how variability improves the development of m-learning applications by taking into consideration the SMarty approach. Besides that, we evaluated the \texttt{M-SPLear\allowbreak ning} experimentally, comparing it with a singular software development methodology. 
 
+Experimental evaluations may shed light on the identification of evidence from quality and benefits of an approach, justifying its choice. In some cases, the collected evidence may still support the correction of problems identified during the experimental evaluations and improvements in the proposals \cite{wohlin12,juristo10}.
 
-In this context, the lack of studies that investigate the use of SPL and the concept of variability in the domain of m-learning applications motivate us to conduct: (i) the establishment and development of an SPL such this domain \cite{falvojr14,falvojr14b}; and (ii) the evaluation of the proposed SPL.
+Therefore, the experimental evaluation of \texttt{M-SPLear\allowbreak ning} is presented based on two relevant software development variables: time-to-market and number of faults. These variables can be directly influenced by the adopted development methodology and approaches that support the variabilities and commonalities management \cite{hubaux10,capilla13}. Additionally, in industry, quality and time-to-market, such as other variables, can define the success or unsuccess of the business to satisfactorily attend their clients \cite{hubaux10}.
 
-\begin{comment}
-, in order to verify if the adoption of variabilities can result in improvements in the development process of mobile learning applications in relation to the singular (traditional) development.
-\end{comment}
+The experiment was conducted at a real software development company, integrating academic/research proposals with practices from industry and the acquired experience of the participants. Consequently, the comparison of the methodologies, as well as the development process of the \texttt{M-SPLear\allowbreak ning}, can demystify the concept of SPL in the industry. With this, companies should be able to analyze their field of action and evaluate if a systematic reuse approach would be adequate.
 
-The SPL established was called M-SPLear\allowbreak ning, such SPL has been developed based on a concise UML-based variability management approach, named SMarty  (\textbf{S}tereotype-based \textbf{M}anagement of V\textbf{ar}iabili\textbf{ty}), which provides mechanisms to facilitate the identification and representation of variabilities \cite{marcolinospl2017}.
+The paper is organized as follows: Section \ref{section2} summarizes the background of our research, including the main characteristics of \texttt{M-SPLear\allowbreak ning}; Section \ref{section3} adresses its experimental evaluation. Section \ref{section4} discusses the lessons learned from the development and application of \texttt{M-SPLear\allowbreak ning}. Section \ref{section5} discusses the related works, and Section \ref{section6} provides conclusions and perspectives for future work.
 
-In this paper we discuss how variability improves the development of m-learning applications by taking into consideration the SMarty approach. We experimentally evaluated M-SPLear\allowbreak ning regarding singular software development, particularly comparing time-to-market and quality of the software products implemented to the use of both SPL and singular development approaches. 
-
-\begin{comment}The results have shown a significant reduction in the time-to-market and an improvement in the quality, in terms of number of faults, when considering the software products developed from the M-SPLear\allowbreak ning core assets with the support of variabilities.
-\end{comment}
-
-The experiment was conducted at a real software development company, integrating academic proposals with practices from industry and the acquired experience of the participants. Consequently, the comparison of the methodologies, as well as the creating process of the M-SPLear\allowbreak ning, can demystify the concept of SPL in the industry. With this, companies will be able to analyze their field of action and evaluate if a systemic reuse approach would be adequate.
-% Consequentemente, a comparação das metodologias, assim como o processo de criacão da SPL, podem desmistificar o conceito de SPL na indústria. Com isso, empresas poderão analisar seu domínio de atuacão e avaliar se uma abordagem de reuso sistmática seria adequada.
-
-% Consequently, the obtained results can be an attractive option for companies that seek for well-founded methodologies, applied in real case studies, to be adopted in their practical contexts. 
-
-\begin{comment}Additionally, such results can also collaborate in academic results, contributing to the improvement of methodologies based on the industry practices.
-\end{comment}
-
-
-%VERSAO ANTERIOR
-%FINAL Nesse sentido, a ausência de estudos que apresentem SPL e, consequentemente, o conceito de variabilidade aplicados no domínio de aplicações m-learning motivou as seguintes contribuicões: (i) o processo de desenvolvimento de uma SPL, previamente implementada e, (ii) a avaliação desta SPL, no intuito de verificar se a adoção do conceito de variabilidades resulta em melhorias no processo de desenvolvimento de aplicações móveis educacionais em relação ao desenvolvimento singular (tradicional), mais precisamente por meio da avaliação de duas métricas importantes no contexto de indústrias de software: time-to-market e número de defeitos.
-
-%In this sense, the absence of studies that present SPL and, consequently, the concept of variability applied in the domain of m-learning applications encouraged the following contributions: (i) the development process of an SPL, previously implemented and, (ii) the evaluation of this SPL, in order to verify if the adoption of the concept of variabilities results in improvements in the process of development of mobile educational applications in relation to the singular (traditional) development.
-
-%Motivated by this scenario, we have worked on the establishment of M-SPLear\allowbreak ning, an SPL to the m-learning domain \cite{falvojr14}. M-SPLear\allowbreak ning has been developed based on a concise UML-based variability management approach, named SMarty  (\textbf{S}tereotype-based \textbf{M}anagement of V\textbf{ar}iabili\textbf{ty}), which provides mechanisms to facilitate the identification and representation of variabilities \cite{marcolinospl2017}.
-
-%In this paper we discuss how variability improves the development of m-learning applications by taking into consideration the SMarty approach. We experimentally evaluated M-SPLear\allowbreak ning regarding singular software development, particularly comparing time-to-market and quality of the software products implemented to the use of both approaches (SPL and singular development). The results have shown a significant reduction in the time-to-market and an improvement in the quality, in terms of number of faults, when considering the software products developed from the M-SPLear\allowbreak ning core assets with the support of variabilities.
-
-%In this paper we discuss how variability improves the development of m-learning applications in a real software development company, taking into consideration the SMarty approach. We experimentally evaluated the implementation of M-SPLear\allowbreak ning regardug singular software development, particularly comparting time-to-market and quality of the software products 
-
-
-
-%FINAL Nosso experimento foi conduzido em uma empresa de desenvolvimento de software real. Com isso, as evidências coletadas em torno das métricas selecionadas se tornam mais atrativas. Além disso, os participantes foram convidados considerando um tempo mínimo de experiência, visando perfis com bom nível tecnico, mas também boa capacidade de comunicacão e abstracão.
-%Our experiment was conducted at a real software development company. Thus, the evidence collected around the selected metrics become more attractive. In addition, participants were invited considering a minimum amount of experience, aiming at profiles with a good technical level, but also good communication and abstraction skills.
-
-The paper is organized as follows: Section \ref{section2} summarizes the background of our research, including the main characteristics of M-SPLear\allowbreak ning and Section \ref{section3} adresses its experimental evaluation. Section \ref{section4} discusses the lessons learned from the development and application of M-SPLear\allowbreak ning. Section \ref{section5} discusses the related works, and Section \ref{section6} provides conclusions and perspectives for future work.
+%TODO [OK] Citar os gaps relacionados ao gerenciamento de variabilidades.
